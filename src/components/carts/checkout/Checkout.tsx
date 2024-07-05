@@ -1,6 +1,6 @@
 import { IconInfo } from "../../icons/fill/Info";
 import { ProgressBar } from "../../progressBar/ProgressBar";
-import { SummaryTable } from "../SummaryTable";
+import { SummaryTable } from "../payment/paymentTable/SummaryTable";
 import Button from "../../button/Button";
 export interface PaymentChildrenProps {
   subtotal: number;

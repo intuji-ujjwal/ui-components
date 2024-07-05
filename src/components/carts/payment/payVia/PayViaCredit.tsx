@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Alert from "../../Alert/Alert";
-import Button from "../../button/Button";
-import { CreditTable } from "../tables/CreditTable";
+import Alert from "../../../Alert/Alert";
+import Button from "../../../button/Button";
+import { CreditTable } from "../paymentTable/CreditTable";
 
 export interface paymentProp {
   payment: string;

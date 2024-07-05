@@ -1,5 +1,5 @@
-import Button from "../../button/Button";
-import { CardTable } from "../tables/CardTable";
+import Button from "../../../button/Button";
+import { CardTable } from "../paymentTable/CardTable";
 
 export interface paymentProp {
   payment?: string;

@@ -1,7 +1,7 @@
-import Badges from "../../Badges/Badges";
-import { IconTrash } from "../../icons/regular/trash";
-import { rowContentProp } from "../CartItemTable";
-import { IconReset } from "../../icons/regular/reset";
+import Badges from "../../../../Badges/Badges";
+import { IconReset } from "../../../../icons/regular/reset";
+import { IconTrash } from "../../../../icons/regular/trash";
+import { rowContentProp } from "../../CartItems";
 
 interface tableRowProp {
   items: rowContentProp[];

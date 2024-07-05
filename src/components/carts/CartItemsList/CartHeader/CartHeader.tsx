@@ -1,8 +1,9 @@
-import Button from "../../button/Button";
-import { icons } from "../../icons/IconsComponent";
-import { IconHide } from "../../icons/regular/Hide";
-import { IconAdd } from "../../icons/regular/add";
-import { IconShow } from "../../icons/regular/show";
+import Button from "../../../button/Button";
+import { icons } from "../../../icons/IconsComponent";
+import { IconHide } from "../../../icons/regular/Hide";
+import { IconAdd } from "../../../icons/regular/add";
+import { IconShow } from "../../../icons/regular/show";
+
 import { Shoe } from "../assets/Shoe";
 interface cartHeaderProps {
   variant?: string;
@@ -89,7 +90,7 @@ export const CartHeader: React.FC<cartHeaderProps> = ({
             designType="tertiary"
             varient="primary"
             handleClick={() => setShowVariant((prev) => !prev)}
-            classes="flex items-center gap-4 font-semibold text-sm font-semibold text-black "
+            classes="flex items-center  font-semibold text-sm font-semibold text-black "
             leftIcon={
               showVariant ? (
                 <IconHide fill="black" size={18} />

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { CartItemTable, cartTableProps } from "../CartItemTable";
-const meta: Meta<typeof CartItemTable> = {
-  title: "Components/CartItemTable",
-  component: CartItemTable,
+import { CartItems, cartTableProps } from "../CartItemsList/CartItems";
+const meta: Meta<typeof CartItems> = {
+  title: "Components/CartItems",
+  component: CartItems,
   tags: ["autodocs"],
   argTypes: {},
 };

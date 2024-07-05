@@ -1,4 +1,4 @@
-import { CartTab } from "./cartTab/CartTab";
+import { CartTab } from "../cartTab/CartTab";
 export interface PaymentChildrenProps {
   subtotal: number;
   carriageCost: number;

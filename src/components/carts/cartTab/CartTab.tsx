@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../button/Button";
-import { PayViaTable } from "../payVia/PayViaCredit";
-import { PayViaCard } from "../payVia/PayViaCard";
+import { PayViaTable } from "../payment/payVia/PayViaCredit";
+import { PayViaCard } from "../payment/payVia/PayViaCard";
 
 interface CartTabProps {
   payment: string;

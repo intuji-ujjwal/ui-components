@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Payment, { PaymentProps } from "../Payment";
+import Payment, { PaymentProps } from "../payment/Payment";
 const meta: Meta<typeof Payment> = {
   title: "Components/Payment",
   component: Payment,
