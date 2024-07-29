@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badges } from "../Badges";
+import { Badges, badgeVariants } from "../Badges";
 
 const meta: Meta = {
   title: "components/Badges",
   component: Badges,
   tags: ["autodocs"],
-  args: { variant: "green" },
   argTypes: {
     variant: {
       options: ["default", "yellow", "red", "green", "blue", "primary"],
@@ -17,7 +16,7 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Green: Story = {
+export const Default: Story = {
   args: {
     children: "Badges",
   },
