@@ -11,22 +11,25 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+export const defaultItem = [
+  {
+    title: "Accordion Item 1",
+    children: <p>Content for Accordion Item 1</p>,
+  },
+  {
+    title: "Accordion Item 2",
+    children: <p>Content for Accordion Item 2</p>,
+  },
+  {
+    title: "Accordion Item 3",
+    children: <p>Content for Accordion Item 3</p>,
+  },
+];
+
 export const Primary: Story = {
   args: {
-    items: [
-      {
-        title: "Accordion Item 1",
-        children: <p>Content for Accordion Item 1</p>,
-      },
-      {
-        title: "Accordion Item 2",
-        children: <p>Content for Accordion Item 2</p>,
-      },
-      {
-        title: "Accordion Item 3",
-        children: <p>Content for Accordion Item 3</p>,
-      },
-    ],
+    items: defaultItem,
+    allowMultiple: true,
   },
   play: () => console.log("Accordion clicked"),
 };
