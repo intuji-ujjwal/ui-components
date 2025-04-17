@@ -1,9 +1,6 @@
 import React, { FC } from "react";
-import Accordion, { AccordionProps } from "../Accordion";
-import {
-  ChevronDoubleUpIcon,
-  ChevronDoubleDownIcon,
-} from "@heroicons/react/20/solid";
+import Accordion from "../components/Accordion";
+import { AccordionProps } from "../types";
 
 const items = [
   {
@@ -20,14 +17,7 @@ const items = [
   },
 ];
 const Example: FC<AccordionProps> = ({ allowMultiple }) => {
-  return (
-    <Accordion
-      UpIcon={ChevronDoubleUpIcon}
-      DownIcon={ChevronDoubleDownIcon}
-      items={items}
-      allowMultiple={allowMultiple}
-    />
-  );
+  return <Accordion items={items} allowMultiple={allowMultiple} />;
 };
 
 export default Example;
