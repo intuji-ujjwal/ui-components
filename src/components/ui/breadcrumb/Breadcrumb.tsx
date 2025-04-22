@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { slugify } from '../../utils/slugify';
+import { slugify } from '../../../utils/slugify';
 
 interface BreadcrumbsProps {
   title: string | ReactNode;

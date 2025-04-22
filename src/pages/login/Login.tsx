@@ -1,5 +1,5 @@
-import Button from '../../components/button/Button';
 import { ScrapAssistLogo } from './assets/logo';
+import Button from '../../components/ui/button/Button';
 
 const Login = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AlertIcon } from './alertIcon';
-import { cn } from '../../lib/utils';
+import { cn } from '../../../lib/utils';
 
 type AlertType = 'success' | 'error' | 'info' | 'warning' | 'default';
 

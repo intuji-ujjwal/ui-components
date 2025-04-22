@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import { cn } from '../../../lib/utils';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 export interface AvatarProps {
   classes?: string;
