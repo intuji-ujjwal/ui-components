@@ -1,7 +1,7 @@
-import Badges from "../../../../Badges/Badges";
-import { IconReset } from "../../../../icons/regular/reset";
-import { IconTrash } from "../../../../icons/regular/trash";
-import { rowContentProp } from "../../CartItems";
+import Badges from '../../../../Badge/Badge';
+import { IconReset } from '../../../../icons/regular/reset';
+import { IconTrash } from '../../../../icons/regular/trash';
+import { rowContentProp } from '../../CartItems';
 
 interface tableRowProp {
   items: rowContentProp[];
@@ -24,48 +24,63 @@ export const TableRow: React.FC<tableRowProp> = ({
       {extendedItems.map((item, index) => (
         <tr
           key={index}
-          className="border-test p-2 text-center border border-transparent border-b-grayColor last:border-b-transparent rounded-lg my-1"
+          className='border-test border-b-grayColor my-1 rounded-lg border border-transparent p-2 text-center last:border-b-transparent'
         >
-          <td data-title="Size">{item.size}</td>
+          <td data-title='Size'>{item.size}</td>
           {returnOrder ? (
             <>
-              <td data-title="Order Quantity">{item.orderQuantity}</td>
-              <td data-title="Return Quantity">
-                <div className="flex items-center gap-2 ">
+              <td data-title='Order Quantity'>{item.orderQuantity}</td>
+              <td data-title='Return Quantity'>
+                <div className='flex items-center gap-2'>
                   <input
-                    type="number"
-                    className="border p-2 rounded-lg max-md:w-full"
-                    placeholder="Qty"
+                    type='number'
+                    className='rounded-lg border p-2 max-md:w-full'
+                    placeholder='Qty'
                     defaultValue={item.quantity}
                   />
-                  <div className="flex gap-2">
-                    <IconReset fill="black" size={18} />
-                    <IconTrash fill="black" size={18} />
+                  <div className='flex gap-2'>
+                    <IconReset
+                      fill='black'
+                      size={18}
+                    />
+                    <IconTrash
+                      fill='black'
+                      size={18}
+                    />
                   </div>
                 </div>
               </td>
-              <td data-title="Amount">£ {item.amount}</td>
-              <td data-title="Return Info">{item.returnInfo}</td>
+              <td data-title='Amount'>£ {item.amount}</td>
+              <td data-title='Return Info'>{item.returnInfo}</td>
             </>
           ) : (
             <>
-              <td data-title="LeadTime">{item.leadTime}</td>
-              <td data-title="Status">
-                <Badges varient="default" classes="p-3">
+              <td data-title='LeadTime'>{item.leadTime}</td>
+              <td data-title='Status'>
+                <Badges
+                  varient='default'
+                  classes='p-3'
+                >
                   {item.itemStatus}
                 </Badges>
               </td>
-              <td data-title="Quanttiy">
-                <div className="flex items-center gap-2 ">
+              <td data-title='Quanttiy'>
+                <div className='flex items-center gap-2'>
                   <input
-                    type="number"
-                    className="border p-2 rounded-lg max-md:w-full"
-                    placeholder="Qty"
+                    type='number'
+                    className='rounded-lg border p-2 max-md:w-full'
+                    placeholder='Qty'
                     defaultValue={item.quantity}
                   />
-                  <div className="flex gap-2">
-                    <IconReset fill="black" size={18} />
-                    <IconTrash fill="black" size={18} />
+                  <div className='flex gap-2'>
+                    <IconReset
+                      fill='black'
+                      size={18}
+                    />
+                    <IconTrash
+                      fill='black'
+                      size={18}
+                    />
                   </div>
                 </div>
               </td>
