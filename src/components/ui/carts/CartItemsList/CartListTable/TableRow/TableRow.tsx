@@ -1,4 +1,4 @@
-import Badges from '../../../../Badge/Badge';
+import { Badge } from '../../../../Badge/Badge';
 import { IconReset } from '../../../../icons/regular/reset';
 import { IconTrash } from '../../../../icons/regular/trash';
 import { rowContentProp } from '../../CartItems';
@@ -57,12 +57,7 @@ export const TableRow: React.FC<tableRowProp> = ({
             <>
               <td data-title='LeadTime'>{item.leadTime}</td>
               <td data-title='Status'>
-                <Badges
-                  varient='default'
-                  classes='p-3'
-                >
-                  {item.itemStatus}
-                </Badges>
+                <Badge className='p-3'>{item.itemStatus}</Badge>
               </td>
               <td data-title='Quanttiy'>
                 <div className='flex items-center gap-2'>

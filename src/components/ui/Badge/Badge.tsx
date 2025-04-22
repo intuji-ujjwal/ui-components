@@ -24,7 +24,7 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {}
 
-export const Badges: React.FC<BadgeProps> = ({
+export const Badge: React.FC<BadgeProps> = ({
   className,
   variant,
   children,
