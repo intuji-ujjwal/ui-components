@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import useEventListener from "./useEventListener";
+import { useState, useEffect } from 'react';
+import useEventListener from './useEventListener';
 
 export default function useMediaQuery(mediaQuery: string): boolean {
   const [isMatch, setIsMatch] = useState<boolean>(false);
@@ -14,7 +14,7 @@ export default function useMediaQuery(mediaQuery: string): boolean {
   }, [mediaQuery]);
 
   useEventListener(
-    "change",
+    'change',
     (e) => {
       const mediaEvent = e as MediaQueryListEvent;
       setIsMatch(mediaEvent.matches);

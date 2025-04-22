@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Define the props interface
 export interface SemiCircleProgressProps {
@@ -19,8 +19,8 @@ export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
   strokeWidth,
   background,
   diameter,
-  orientation = "up",
-  direction = "right",
+  orientation = 'up',
+  direction = 'right',
   title,
   showPercentValue = true,
   percentage,
@@ -34,34 +34,34 @@ export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
   const semiCirclePercentage = percentageValue * (circumference / 100);
 
   let rotation;
-  if (orientation === "down") {
+  if (orientation === 'down') {
     rotation =
-      direction === "left"
-        ? "rotate(180deg) rotateY(180deg)"
-        : "rotate(180deg)";
+      direction === 'left'
+        ? 'rotate(180deg) rotateY(180deg)'
+        : 'rotate(180deg)';
   } else {
-    rotation = direction === "right" ? "rotateY(180deg)" : "";
+    rotation = direction === 'right' ? 'rotateY(180deg)' : '';
   }
 
   return (
     <div
-      className="semicircle-container flex flex-col justify-center items-center"
-      style={{ position: "relative" }}
+      className='semicircle-container flex flex-col items-center justify-center'
+      style={{ position: 'relative' }}
     >
       <svg
         width={diameter}
         height={diameter / 2}
         style={{
           transform: rotation,
-          overflow: "hidden",
+          overflow: 'hidden',
         }}
       >
         <circle
-          strokeLinecap="round"
+          strokeLinecap='round'
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill="none"
+          fill='none'
           stroke={background}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
@@ -73,25 +73,25 @@ export const SemiCircleProgress: React.FC<SemiCircleProgressProps> = ({
           cx={coordinateForCircle}
           cy={coordinateForCircle}
           r={radius}
-          fill="none"
+          fill='none'
           stroke={stroke}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           style={{
             strokeDashoffset: semiCirclePercentage,
             transition:
-              "stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s",
+              'stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s',
           }}
         />
       </svg>
       <div
-        className="semicircle-percent-value flex flex-col"
+        className='semicircle-percent-value flex flex-col'
         style={{
-          width: "100%",
-          left: "0",
-          textAlign: "center",
-          bottom: orientation === "down" ? "auto" : "0",
-          position: "absolute",
+          width: '100%',
+          left: '0',
+          textAlign: 'center',
+          bottom: orientation === 'down' ? 'auto' : '0',
+          position: 'absolute',
         }}
       >
         {title}

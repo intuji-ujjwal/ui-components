@@ -1,13 +1,13 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Example from "./Example";
+import { Meta, StoryObj } from '@storybook/react';
+import Example from './Example';
 
 const meta = {
-  title: "Components/Card",
+  title: 'Components/Card',
   component: Example,
   argTypes: {
     children: {
       control: {
-        type: "text",
+        type: 'text',
       },
     },
   },
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Gradient: Story = {
   args: {
-    children: "Card",
+    children: 'Card',
   },
-  play: () => console.log("Card clicked"),
+  play: () => console.log('Card clicked'),
 };

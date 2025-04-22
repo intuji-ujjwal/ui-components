@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { AlertIcon } from "./alertIcon";
-import { cn } from "../../lib/utils";
+import { AlertIcon } from './alertIcon';
+import { cn } from '../../lib/utils';
 
-type AlertType = "success" | "error" | "info" | "warning" | "default";
+type AlertType = 'success' | 'error' | 'info' | 'warning' | 'default';
 
-const defaultBttnClass = "py-4 px-6 border-l-4 w-full rounded";
+const defaultBttnClass = 'py-4 px-6 border-l-4 w-full rounded';
 
 const AlertTypeClasses: Record<AlertType, string> = {
-  success: "bg-green-50 border-l-green-600",
-  error: "bg-warning-50 border-l-warning-600",
-  info: "bg-blue-50 border-l-blue-600",
-  warning: "bg-yellow-50 border-l-yellow-600",
-  default: "bg-gray-50 border-l-gray-600",
+  success: 'bg-green-50 border-l-green-600',
+  error: 'bg-warning-50 border-l-warning-600',
+  info: 'bg-blue-50 border-l-blue-600',
+  warning: 'bg-yellow-50 border-l-yellow-600',
+  default: 'bg-gray-50 border-l-gray-600',
 };
 
 export interface AlertProps {
@@ -27,7 +27,7 @@ export interface AlertProps {
   setOpenState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const Alert: React.FC<AlertProps> = ({
-  type = "default",
+  type = 'default',
   openState = false,
   title,
   description,
@@ -41,28 +41,34 @@ const Alert: React.FC<AlertProps> = ({
     <>
       {openState === true ? (
         <div className={cn(defaultBttnClass, AlertTypeClasses[type], classes)}>
-          <div className="pl-14 relative">
-            <span className="icon left-0 top-0 block absolute">
+          <div className='relative pl-14'>
+            <span className='icon absolute left-0 top-0 block'>
               {alertIcon ? alertIcon : AlertIcon(type)}
             </span>
-            <div className="flex items-start justify-between gap-2">
-              <div className="content">
+            <div className='flex items-start justify-between gap-2'>
+              <div className='content'>
                 {title && (
-                  <h3 className="text-base font-semibold m-0 mb-1 title">
+                  <h3 className='title m-0 mb-1 text-base font-semibold'>
                     {title}
                   </h3>
                 )}
                 {description && (
-                  <div className="description text-base font-normal">
+                  <div className='description text-base font-normal'>
                     {description}
                   </div>
                 )}
               </div>
-              <div className="flex items-center gap-1.5">
-                <a href={link} className="text-xs">
+              <div className='flex items-center gap-1.5'>
+                <a
+                  href={link}
+                  className='text-xs'
+                >
                   View Details
                 </a>
-                <span className="text-xs" onClick={() => setOpenState(false)}>
+                <span
+                  className='text-xs'
+                  onClick={() => setOpenState(false)}
+                >
                   Dismiss
                 </span>
               </div>

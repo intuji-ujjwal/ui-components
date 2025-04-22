@@ -1,19 +1,19 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Checkout, { PaymentProps } from "../checkout/Checkout";
+import { Meta, StoryObj } from '@storybook/react';
+import Checkout, { PaymentProps } from '../checkout/Checkout';
 const meta: Meta<typeof Checkout> = {
-  title: "Components/Checkout",
+  title: 'Components/Checkout',
   component: Checkout,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     borderStyle: {
       options: [
-        "border-solid	",
-        "border-dashed	",
-        "border-dotted	",
-        "border-double	",
-        "border-hidden	",
+        'border-solid	',
+        'border-dashed	',
+        'border-dotted	',
+        'border-double	',
+        'border-hidden	',
       ],
-      control: { type: "select" },
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -24,18 +24,18 @@ export default meta;
 
 export const Primary: StoryObj<PaymentProps> = {
   args: {
-    borderStyle: "border-none",
+    borderStyle: 'border-none',
     min: 0,
     max: 100,
     percentage: 40,
-    color: "red",
+    color: 'red',
     items: [
       {
         subtotal: 2525.55,
         carriageCost: 0.0,
-        estimatedVat: "TBD",
+        estimatedVat: 'TBD',
         orderTotal: 2858.2,
-        title: "",
+        title: '',
       },
     ],
   },

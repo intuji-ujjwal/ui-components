@@ -1,6 +1,6 @@
-import React from "react";
-import { MultiSelect } from "react-multi-select-component";
-import "./MultiSelectionItems.css";
+import React from 'react';
+import { MultiSelect } from 'react-multi-select-component';
+import './MultiSelectionItems.css';
 
 export interface MultiSelectOptionProps {
   title?: string;
@@ -37,13 +37,13 @@ const MultiSelectOption: React.FC<MultiSelectOptionProps> = ({
       options={items}
       value={selected}
       onChange={setSelected}
-      labelledBy={title || "Select"}
+      labelledBy={title || 'Select'}
       hasSelectAll={hasSelectAll === true ? true : false}
-      overrideStrings={{ selectSomeItems: overrideStrings ?? "Select" }}
+      overrideStrings={{ selectSomeItems: overrideStrings ?? 'Select' }}
       disabled={disabled === true ? true : false}
       disableSearch={disableSearch === true ? true : false}
       isLoading={isLoading === true ? true : false}
-      className={className ? className : ""}
+      className={className ? className : ''}
       closeOnChangedValue={closeOnChangedValue === true ? true : false}
       {...props}
     />

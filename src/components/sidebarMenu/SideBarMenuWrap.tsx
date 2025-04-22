@@ -1,6 +1,6 @@
-import React, { ReactNode, useState } from "react";
-import SideBarMenu from "./SideBarMenu";
-import IconsComponent from "../icons/IconsComponent";
+import React, { ReactNode, useState } from 'react';
+import SideBarMenu from './SideBarMenu';
+import IconsComponent from '../icons/IconsComponent';
 type MenuItem = {
   name: string;
   link: string;
@@ -27,7 +27,7 @@ const SidebarMenuContentWrap: React.FC<SidebarMenuContentWrapProps> = ({
   const [open, setOpen] = useState<boolean>(true);
 
   return (
-    <div className="sidebar-with-content-area min-h-screen w-full flex items-start justify-start ">
+    <div className='sidebar-with-content-area flex min-h-screen w-full items-start justify-start'>
       <SideBarMenu
         expandSideBar={open}
         sidebarMenus={sidebarMenus} // Pass sidebarBottomChildren here
@@ -36,13 +36,17 @@ const SidebarMenuContentWrap: React.FC<SidebarMenuContentWrapProps> = ({
       <div
         className={`content-area relative p-6 ${
           open
-            ? "expanded w-[calc(100%_-_288px)] left-[288px]"
-            : "w-[calc(100%_-_96px)] left-[96px]"
+            ? 'expanded left-[288px] w-[calc(100%_-_288px)]'
+            : 'left-[96px] w-[calc(100%_-_96px)]'
         } transition duration-150 ease-in-out`}
       >
-        <div className="icon-wrap">
+        <div className='icon-wrap'>
           <span onClick={() => setOpen(!open)}>
-            <IconsComponent fill="red" icon="reg-sidebar-expand" size="4xl" />
+            <IconsComponent
+              fill='red'
+              icon='reg-sidebar-expand'
+              size='4xl'
+            />
           </span>
         </div>
         <div>{children}</div>

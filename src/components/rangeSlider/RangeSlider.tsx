@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
-import "./rangeSlider.css";
+import React, { useCallback, useEffect, useState, useRef } from 'react';
+import './rangeSlider.css';
 
 export interface RangeSliderProps {
   min: number;
@@ -40,10 +40,10 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
   }, [maxVal, getPercent]);
 
   return (
-    <div className="flex justify-center items-center ">
-      <div className="relative w-80">
+    <div className='flex items-center justify-center'>
+      <div className='relative w-80'>
         <input
-          type="range"
+          type='range'
           min={min}
           max={max}
           value={minVal}
@@ -52,27 +52,27 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             setMinVal(value);
             minValRef.current = value;
           }}
-          className={`absolute top-1/2 -translate-y-1/2 left-0 w-full h-0 thumb thumb--left ${
-            minVal <= max / 2 ? "z-50" : "z-10"
+          className={`thumb thumb--left absolute left-0 top-1/2 h-0 w-full -translate-y-1/2 ${
+            minVal <= max / 2 ? 'z-50' : 'z-10'
           }`}
           style={{
-            appearance: "none",
-            pointerEvents: "none",
-            outline: "none",
+            appearance: 'none',
+            pointerEvents: 'none',
+            outline: 'none',
           }}
         />
         <div
-          className="absolute -bottom-10  mt-[-25px] text-sm text-gray-500"
+          className='absolute -bottom-10 mt-[-25px] text-sm text-gray-500'
           style={{
             left: `calc(${getPercent(minVal)}% + 4px)`, // Adjusting for the width of the tooltip
-            transform: "translateX(-50%)",
+            transform: 'translateX(-50%)',
           }}
         >
           £{minVal}
         </div>
 
         <input
-          type="range"
+          type='range'
           min={min}
           max={max}
           value={maxVal}
@@ -81,31 +81,31 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             setMaxVal(value);
             maxValRef.current = value;
           }}
-          className={`absolute top-1/2 -translate-y-1/2 left-0 w-full h-0 thumb  thumb--right ${
-            maxVal > max / 2 ? "z-50" : "z-10"
+          className={`thumb thumb--right absolute left-0 top-1/2 h-0 w-full -translate-y-1/2 ${
+            maxVal > max / 2 ? 'z-50' : 'z-10'
           }`}
           style={{
-            appearance: "none",
-            pointerEvents: "none",
-            outline: "none",
+            appearance: 'none',
+            pointerEvents: 'none',
+            outline: 'none',
           }}
         />
         <div
-          className="absolute -bottom-10 mt-[-25px] text-sm text-gray-500"
+          className='absolute -bottom-10 mt-[-25px] text-sm text-gray-500'
           style={{
             left: `calc(${getPercent(maxVal)}% - 8px)`, // Adjusting for the width of the tooltip
-            transform: "translateX(-50%)",
+            transform: 'translateX(-50%)',
           }}
         >
           £{maxVal}
         </div>
 
-        <div className="relative w-full">
-          <div className="absolute h-1 rounded-sm bg-[#EFF6FF] w-full z-10 shadow-lg" />
+        <div className='relative w-full'>
+          <div className='absolute z-10 h-1 w-full rounded-sm bg-[#EFF6FF] shadow-lg' />
           <div
             ref={range}
-            style={{ backgroundColor: fill ? fill : "#2563EB" }}
-            className="absolute h-1 rounded-sm bg-teal-200 z-40 "
+            style={{ backgroundColor: fill ? fill : '#2563EB' }}
+            className='absolute z-40 h-1 rounded-sm bg-teal-200'
           />
         </div>
       </div>

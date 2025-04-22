@@ -1,5 +1,5 @@
-import React from "react";
-import "./inputField.css";
+import React from 'react';
+import './inputField.css';
 interface PasswordStrengthIllustrationProps {
   strength: number;
 }
@@ -22,9 +22,9 @@ export default PasswordStrengthIllustration;
 
 const PasswordStrengthStep = (p0: number): JSX.Element => {
   return (
-    <div className="password-strength">
+    <div className='password-strength'>
       {p0 === 1 && (
-        <div className="very-week strength flex items-center gap-1.5">
+        <div className='very-week strength flex items-center gap-1.5'>
           <span></span>
           <span></span>
           <span></span>
@@ -32,7 +32,7 @@ const PasswordStrengthStep = (p0: number): JSX.Element => {
         </div>
       )}
       {p0 === 2 && (
-        <div className="weak strength flex items-center gap-1.5">
+        <div className='weak strength flex items-center gap-1.5'>
           <span></span>
           <span></span>
           <span></span>
@@ -40,7 +40,7 @@ const PasswordStrengthStep = (p0: number): JSX.Element => {
         </div>
       )}
       {p0 === 3 && (
-        <div className="good strength flex items-center gap-1.5">
+        <div className='good strength flex items-center gap-1.5'>
           <span></span>
           <span></span>
           <span></span>
@@ -48,7 +48,7 @@ const PasswordStrengthStep = (p0: number): JSX.Element => {
         </div>
       )}
       {p0 === 4 && (
-        <div className="strong strength flex items-center gap-1.5">
+        <div className='strong strength flex items-center gap-1.5'>
           <span></span>
           <span></span>
           <span></span>

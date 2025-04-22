@@ -1,5 +1,5 @@
-import { rowContentProp } from "../CartItems";
-import { TableRow } from "./TableRow/TableRow";
+import { rowContentProp } from '../CartItems';
+import { TableRow } from './TableRow/TableRow';
 interface tableProps {
   returnOrder: boolean;
   items: rowContentProp[];
@@ -11,9 +11,9 @@ export const Table: React.FC<tableProps> = ({
   desiredRows,
 }) => {
   return (
-    <table className="table-auto w-full text-center ">
-      <thead className="uppercase text-primary  text-sm">
-        <tr className="border-b border-grayColor p-8 ">
+    <table className='w-full table-auto text-center'>
+      <thead className='text-primary text-sm uppercase'>
+        <tr className='border-grayColor border-b p-8'>
           <th>Size(Uk)</th>
           {returnOrder ? (
             <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,8 +9,8 @@ import {
   Tooltip,
   Filler,
   Legend,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -48,7 +48,7 @@ const LineChart: React.FC<LineChartProps> = ({
   showShadow,
   bars,
 }) => {
-  const labels = ["DataOne", "DataTwo", "DataThree", "DataFour", "DataFive"];
+  const labels = ['DataOne', 'DataTwo', 'DataThree', 'DataFour', 'DataFive'];
   const options = {
     responsive: true,
     plugins: {
@@ -91,9 +91,9 @@ const LineChart: React.FC<LineChartProps> = ({
         items[index]?.dataFour || 0,
         items[index]?.dataFive || 0,
       ],
-      borderColor: items[index]?.borderColor || "gray",
+      borderColor: items[index]?.borderColor || 'gray',
 
-      backgroundColor: items[index]?.shadowColor || "gray",
+      backgroundColor: items[index]?.shadowColor || 'gray',
       zIndex: items[index]?.zIndex,
       shadowBlur: 10, // Shadow blur radius
     }));
@@ -104,8 +104,11 @@ const LineChart: React.FC<LineChartProps> = ({
   };
 
   return (
-    <div style={{ width: "500px" }}>
-      <Line options={options} data={data} />
+    <div style={{ width: '500px' }}>
+      <Line
+        options={options}
+        data={data}
+      />
     </div>
   );
 };

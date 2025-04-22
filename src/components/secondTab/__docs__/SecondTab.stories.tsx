@@ -1,23 +1,23 @@
-import { Meta, StoryObj } from "@storybook/react";
-import SecondTab, { SecondTabProps } from "../SecondTab";
+import { Meta, StoryObj } from '@storybook/react';
+import SecondTab, { SecondTabProps } from '../SecondTab';
 const meta: Meta<typeof SecondTab> = {
-  title: "Components/SecondTab",
+  title: 'Components/SecondTab',
   component: SecondTab,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     borderStyle: {
       options: [
-        "border-solid	",
-        "border-dashed	",
-        "border-dotted	",
-        "border-double	",
-        "border-hidden	",
+        'border-solid	',
+        'border-dashed	',
+        'border-dotted	',
+        'border-double	',
+        'border-hidden	',
       ],
-      control: { type: "select" },
+      control: { type: 'select' },
     },
     items: {
       control: {
-        type: "object",
+        type: 'object',
       },
     },
   },
@@ -27,19 +27,19 @@ export default meta;
 export const Primary: StoryObj<SecondTabProps> = {
   args: {
     count: 2,
-    borderStyle: "border-none",
-    borderColor: "red",
+    borderStyle: 'border-none',
+    borderColor: 'red',
     items: [
       {
-        title: "TitleOne",
+        title: 'TitleOne',
         children: <p>title ones content</p>,
       },
       {
-        title: "TitleTwo",
+        title: 'TitleTwo',
         children: <p>title twos content</p>,
       },
       {
-        title: "TitleThree",
+        title: 'TitleThree',
         children: <p>title twos content</p>,
       },
     ],

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import Alert, { AlertProps } from "../Alert";
+import React, { useState } from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import Alert, { AlertProps } from '../Alert';
 
 const meta: Meta<typeof Alert> = {
-  title: "components/Alert",
+  title: 'components/Alert',
   component: Alert,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     type: {
-      options: ["success", "error", "info", "warning", "default"],
-      control: { type: "select" },
+      options: ['success', 'error', 'info', 'warning', 'default'],
+      control: { type: 'select' },
     },
   },
 };
@@ -22,19 +22,23 @@ const AlertStory: React.FC<AlertProps> = (args) => {
     setOpenState((prevOpenState) => !prevOpenState);
   };
   return (
-    <Alert {...args} openState={openState} setOpenState={toggleOpenState} />
+    <Alert
+      {...args}
+      openState={openState}
+      setOpenState={toggleOpenState}
+    />
   );
 };
 
 export const Primary: StoryObj<AlertProps> = {
   args: {
-    type: "default",
-    title: "Default Alert",
-    description: "This is a default alert.",
+    type: 'default',
+    title: 'Default Alert',
+    description: 'This is a default alert.',
     children: <div></div>,
-    link: "",
+    link: '',
     openState: true,
-    classes: "",
+    classes: '',
     alertIcon: null,
   },
   render: (args) => <AlertStory {...args} />,

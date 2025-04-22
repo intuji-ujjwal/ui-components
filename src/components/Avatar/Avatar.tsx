@@ -1,6 +1,6 @@
-import React from "react";
-import { cn } from "../../lib/utils";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import React from 'react';
+import { cn } from '../../lib/utils';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 export interface AvatarProps {
   classes?: string;
@@ -19,10 +19,10 @@ const Avatar: React.FC<AvatarProps> = ({
   size,
   borderWidth,
 }: AvatarProps) => {
-  const isBigScreen = useMediaQuery("(min-width: 1200px)");
-  const isDesktopOrLaptop = useMediaQuery("(min-width: 991px)");
-  const isTablet = useMediaQuery("(min-width: 768px)");
-  const isMobile = useMediaQuery("(min-width: 300px)");
+  const isBigScreen = useMediaQuery('(min-width: 1200px)');
+  const isDesktopOrLaptop = useMediaQuery('(min-width: 991px)');
+  const isTablet = useMediaQuery('(min-width: 768px)');
+  const isMobile = useMediaQuery('(min-width: 300px)');
 
   if (!avatar || avatar.length < 1) return null;
 
@@ -43,27 +43,27 @@ const Avatar: React.FC<AvatarProps> = ({
   const defaultclass = `rounded-full border border-gray-500 overflow-hidden block first:ml-0 -ml-2 before:content-[''] before:block before:pt-[100%] before:bg-white relative`;
 
   return (
-    <div className="avatar">
+    <div className='avatar'>
       {avatar && (
-        <div className="avatar-wrap flex items-center">
+        <div className='avatar-wrap flex items-center'>
           {avatarsToShow.map((item) => (
             <figure
               className={cn(defaultclass, classes)}
               key={item?.id}
               style={{
-                width: size ? size + "px" : "70px",
-                borderWidth: borderWidth ? borderWidth + "px" : "4px",
+                width: size ? size + 'px' : '70px',
+                borderWidth: borderWidth ? borderWidth + 'px' : '4px',
               }}
             >
               <img
                 src={item?.imageSrc}
                 alt={item?.name}
-                className="w-full h-full object-cover absolute top-0 left-0"
+                className='absolute left-0 top-0 h-full w-full object-cover'
               />
             </figure>
           ))}
           {remainingCount > 0 && (
-            <span className="text-sm ml-2">+{remainingCount} more</span>
+            <span className='ml-2 text-sm'>+{remainingCount} more</span>
           )}
         </div>
       )}

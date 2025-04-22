@@ -1,12 +1,12 @@
-import "./inputField.css";
-import React, { useState } from "react";
-import { calculatePasswordStrength } from "./calculatePasswordStrength";
-import PasswordStrengthIllustration from "./PasswordStrengthIllustration";
-import { Controller, useFormContext } from "react-hook-form";
+import './inputField.css';
+import React, { useState } from 'react';
+import { calculatePasswordStrength } from './calculatePasswordStrength';
+import PasswordStrengthIllustration from './PasswordStrengthIllustration';
+import { Controller, useFormContext } from 'react-hook-form';
 
 export interface PrimaryInputProps {
   requirement?: boolean;
-  type: "text" | "email" | "password" | "url" | "number" | "date" | "search";
+  type: 'text' | 'email' | 'password' | 'url' | 'number' | 'date' | 'search';
   placeholder?: string;
   name: string;
   label?: React.ReactNode;
@@ -18,22 +18,22 @@ export interface PrimaryInputProps {
 }
 
 const type_def = {
-  text: "text-field",
-  email: "email-field",
-  password: "password-field",
-  url: "url-field",
-  number: "number-field",
-  date: "date-field",
-  search: "search-field",
+  text: 'text-field',
+  email: 'email-field',
+  password: 'password-field',
+  url: 'url-field',
+  number: 'number-field',
+  date: 'date-field',
+  search: 'search-field',
 };
 
 const InputField: React.FC<PrimaryInputProps> = ({
   requirement = false,
-  type = "text",
+  type = 'text',
   placeholder,
   name,
   max_width,
-  defaultValue = "",
+  defaultValue = '',
   rules,
   minHeight,
   ...props
@@ -72,19 +72,19 @@ const InputField: React.FC<PrimaryInputProps> = ({
   return (
     <div
       className={`${class_style} input-field w-full`}
-      style={{ maxWidth: max_width ? max_width : "" }}
+      style={{ maxWidth: max_width ? max_width : '' }}
     >
       {props.label && (
-        <label className="block text-xs font-semibold mb-2 capitalize">
-          {props.label}{" "}
+        <label className='mb-2 block text-xs font-semibold capitalize'>
+          {props.label}{' '}
           {requirement && (
-            <span className="requirement text-[#FF4A3D] mb-1 font-light">
+            <span className='requirement mb-1 font-light text-[#FF4A3D]'>
               *
             </span>
           )}
         </label>
       )}
-      <div className="relative">
+      <div className='relative'>
         <Controller
           name={name}
           control={control}
@@ -95,39 +95,39 @@ const InputField: React.FC<PrimaryInputProps> = ({
             fieldState: { error },
           }) => (
             <>
-              <div className="relative">
+              <div className='relative'>
                 <input
                   id={name}
                   name={name}
                   type={
-                    type === "password"
+                    type === 'password'
                       ? showPassword
-                        ? "text"
-                        : "password"
+                        ? 'text'
+                        : 'password'
                       : type
                   }
                   placeholder={placeholder}
-                  value={value ?? ""}
+                  value={value ?? ''}
                   onChange={(e) => {
                     onChange(e);
-                    if (type === "password") handlePasswordChange(e);
+                    if (type === 'password') handlePasswordChange(e);
                   }}
                   onBlur={onBlur}
                   ref={ref}
-                  className={`input-${class_style} rounded border-2 py-2.5 w-full leading-none text-base font-normal h-[40px] ${type === "search" ? "pl-[46px] pr-4" : "px-4"} ${error ? "error border-danger-500 focus:outline-none" : "border-neutral-100 focus:outline-primary-700"} min-h-[${minHeight ? minHeight + "px" : ""}]`}
+                  className={`input-${class_style} h-[40px] w-full rounded border-2 py-2.5 text-base font-normal leading-none ${type === 'search' ? 'pl-[46px] pr-4' : 'px-4'} ${error ? 'error border-danger-500 focus:outline-none' : 'focus:outline-primary-700 border-neutral-100'} min-h-[${minHeight ? minHeight + 'px' : ''}]`}
                   style={
-                    type === "search"
+                    type === 'search'
                       ? {
                           ...SearchBg,
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "17px center",
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: '17px center',
                         }
                       : {}
                   }
                 />
-                {type == "password" && (
+                {type == 'password' && (
                   <span
-                    className="absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer"
+                    className='absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer'
                     onClick={handleTogglePassword}
                   >
                     Show
@@ -136,12 +136,12 @@ const InputField: React.FC<PrimaryInputProps> = ({
               </div>
 
               {error && (
-                <div className="errorinfo error-message mt-2 text-danger-500 before:inline before:text-danger-500 before:content-['⚠'] before:mr-1">
-                  {error?.message || ""}
+                <div className="errorinfo error-message text-danger-500 before:text-danger-500 mt-2 before:mr-1 before:inline before:content-['⚠']">
+                  {error?.message || ''}
                 </div>
               )}
-              {type === "password" && (
-                <div className="password-strength">
+              {type === 'password' && (
+                <div className='password-strength'>
                   <PasswordStrengthIllustration strength={passwordStrength} />
                 </div>
               )}

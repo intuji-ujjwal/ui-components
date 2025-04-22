@@ -1,6 +1,6 @@
-import React, { ReactNode, useEffect, useRef, useState } from "react";
-import Button from "../button/Button";
-import { IconClose } from "../icons/regular/close";
+import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import Button from '../button/Button';
+import { IconClose } from '../icons/regular/close';
 export interface PopupProps {
   title: string;
   children: ReactNode;
@@ -20,45 +20,48 @@ const PopupModal: React.FC<PopupProps> = ({ title, children }) => {
     };
 
     if (showModal) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [showModal]);
 
   return (
     <>
       <Button
-        size="medium"
-        type="button"
-        designType={"solid"}
-        varient={"primary"}
+        size='medium'
+        type='button'
+        designType={'solid'}
+        varient={'primary'}
         handleClick={() => setShowModal(true)}
-        classes="text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150"
+        classes='text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150'
       >
         {title}
       </Button>
       {showModal && (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50">
+          <div className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden'>
             <div
               ref={modalRef}
-              className="relative w-auto my-6 mx-auto max-w-3xl"
+              className='relative mx-auto my-6 w-auto max-w-3xl'
             >
-              <div className="border-0 rounded-lg shadow-lg flex flex-col w-full bg-white p-5 relative">
+              <div className='relative flex w-full flex-col rounded-lg border-0 bg-white p-5 shadow-lg'>
                 {children}
                 <span
-                  className="-top-3 right-0 absolute"
+                  className='absolute -top-3 right-0'
                   onClick={() => setShowModal(false)}
                 >
-                  <IconClose fill="red" size={22} />
+                  <IconClose
+                    fill='red'
+                    size={22}
+                  />
                 </span>
               </div>
             </div>
           </div>
-          <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
+          <div className='fixed inset-0 z-40 bg-black opacity-70'></div>
         </>
       )}
     </>

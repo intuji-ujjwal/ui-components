@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { UseAccordionStateResult } from "../types";
+import { useState } from 'react';
+import { UseAccordionStateResult } from '../types';
 
 const useAccordionState = (allowMultiple: boolean): UseAccordionStateResult => {
   const [openItems, setOpenItems] = useState<number[]>([]);

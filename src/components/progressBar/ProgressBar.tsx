@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 export interface ProgressBarProps {
   percentage?: number;
   color?: string;
@@ -17,12 +17,12 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
     setIsAnimated(true);
   }, [percentage]);
   return (
-    <div className="w-full flex items-center  gap-2 text-gray-400 text-sm">
-      <div className="">£{min}</div>
-      <div className="h-2 bg-neutral-200 dark:bg-neutral-600 w-96 rounded overflow-hidden">
+    <div className='flex w-full items-center gap-2 text-sm text-gray-400'>
+      <div className=''>£{min}</div>
+      <div className='h-2 w-96 overflow-hidden rounded bg-neutral-200 dark:bg-neutral-600'>
         <div
           className={`h-full rounded transition-all duration-500 ${
-            isAnimated ? "animate-progress" : ""
+            isAnimated ? 'animate-progress' : ''
           }`}
           style={{
             width: `${percentage}%`,

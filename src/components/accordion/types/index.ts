@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
@@ -21,7 +21,7 @@ export interface AccordionItemInternalProps extends AccordionItemProps {
   UpIcon?: React.ComponentType<IconProps>;
   DownIcon?: React.ComponentType<IconProps>;
   focusClassName?: string;
-  theme?: "default" | "gray" | "disabled";
+  theme?: 'default' | 'gray' | 'disabled';
 }
 
 export interface UseAccordionStateResult {

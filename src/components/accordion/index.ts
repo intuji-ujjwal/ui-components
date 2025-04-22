@@ -1,1 +1,1 @@
-export { default } from "./components/Accordion";
+export { default } from './components/Accordion';

@@ -1,4 +1,4 @@
-.radio-input-field{
+.radio-input-field {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -8,11 +8,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-	display: flex;
-	/* justify-content: flex-end; */
-	align-items: center;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
 }
-
 
 /* Hide the browser's default radio button */
 .radio-input-field input {
@@ -33,28 +32,28 @@
   width: 16px;
   background-color: #fff;
   border-radius: 50%;
-  border:2px solid #C4C4C4;
+  border: 2px solid #c4c4c4;
 }
 
-.with-additional-info.radio-input-field  .checkmark{
+.with-additional-info.radio-input-field .checkmark {
   top: 0%;
   transform: translateY(5px);
 }
 
 /* On mouse-over, add a grey background color */
 .radio-input-field input:disabled ~ .checkmark {
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
 }
 
 /* When the radio button is checked, add a blue background */
 .radio-input-field input:checked ~ .checkmark {
-  background-color: #1A96FC;
-  border:none;
+  background-color: #1a96fc;
+  border: none;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .radio-input-field .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -66,14 +65,14 @@
 
 /* Style the indicator (dot/circle) */
 .radio-input-field .checkmark:after {
- 	top: 50%;
-	left: 50%;
-    transform: translate(-50%, -50%);
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
-.radio-input-field:hover input:disabled ~ .checkmark:after{
-    display: none;
+.radio-input-field:hover input:disabled ~ .checkmark:after {
+  display: none;
 }

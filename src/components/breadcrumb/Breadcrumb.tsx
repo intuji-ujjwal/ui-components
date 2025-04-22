@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { slugify } from "../../utils/slugify";
+import React, { ReactNode } from 'react';
+import { slugify } from '../../utils/slugify';
 
 interface BreadcrumbsProps {
   title: string | ReactNode;
@@ -17,53 +17,53 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
 }) => {
   return (
     <div
-      className={`breadcrumb  bg-danger-0 px-6 py-4 flex  items-center gap-5 breadcrumb-${
-        title ? slugify(title) : "default"
+      className={`breadcrumb bg-danger-0 flex items-center gap-5 px-6 py-4 breadcrumb-${
+        title ? slugify(title) : 'default'
       }`}
     >
       {previcon && (
         <div
-          className="icon w-[36px] h-[36px] inline-flex items-center justify-center border border-neutral-200 rounded cursor-pointer"
+          className='icon inline-flex h-[36px] w-[36px] cursor-pointer items-center justify-center rounded border border-neutral-200'
           onClick={onClick}
         >
           {previcon}
         </div>
       )}
       <div
-        className={`inline-flex flex-wrap items-center justify-between  ${
-          previcon ? "w-[calc(100%_-_50px)]" : "w-full"
+        className={`inline-flex flex-wrap items-center justify-between ${
+          previcon ? 'w-[calc(100%_-_50px)]' : 'w-full'
         }`}
       >
-        <div className="title-wrap">
+        <div className='title-wrap'>
           {title && (
-            <h1 className="text-2xl text-neutral-500 font-semibold">{title}</h1>
+            <h1 className='text-2xl font-semibold text-neutral-500'>{title}</h1>
           )}
 
           {path && (
-            <ul className="breadcrumb list-none flex items-center gap-1">
+            <ul className='breadcrumb flex list-none items-center gap-1'>
               {path
-                .filter((path) => path?.label !== "")
+                .filter((path) => path?.label !== '')
                 .map((segment) => (
                   <>
-                    {segment.label === "" ? undefined : (
+                    {segment.label === '' ? undefined : (
                       <li
                         key={segment?.id}
-                        className="breadcrumb-item font-normal text-sm inline-flex after:content-['/'] after:block last:after:content-none after:ml-1 after:text-gray-500"
+                        className="breadcrumb-item inline-flex text-sm font-normal after:ml-1 after:block after:text-gray-500 after:content-['/'] last:after:content-none"
                       >
                         {(() => {
                           switch (true) {
                             case segment?.id !== path.length - 1:
                               return (
                                 <a
-                                  href={segment?.link ?? "/"}
-                                  className="text-gray-500"
+                                  href={segment?.link ?? '/'}
+                                  className='text-gray-500'
                                 >
                                   {segment?.label}
                                 </a>
                               );
                             default:
                               return (
-                                <span className="text-gray-800">
+                                <span className='text-gray-800'>
                                   {segment?.label}
                                 </span>
                               );
@@ -77,7 +77,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
           )}
         </div>
         {children && (
-          <div className="other-accessories ml-auto flex flex-wrap gap-4">
+          <div className='other-accessories ml-auto flex flex-wrap gap-4'>
             {children}
           </div>
         )}

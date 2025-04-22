@@ -3,12 +3,12 @@
     width: 0%;
   }
   100% {
-    width: var(--percentage); 
+    width: var(--percentage);
   }
 }
 .animate-progress {
   animation: progress 0.5s ease-out;
-  --percentage: 0%; 
+  --percentage: 0%;
 }
 
 .animate-progress {

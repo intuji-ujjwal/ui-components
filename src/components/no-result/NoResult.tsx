@@ -9,10 +9,10 @@ type NoResultProps = {
 const NoResult = ({ title, desc, classes }: NoResultProps) => {
   return (
     <div
-      className={`no-result py-16 px-5 text-center ${classes ? classes : ""}`}
+      className={`no-result px-5 py-16 text-center ${classes ? classes : ''}`}
     >
-      <h2 className="text-base text-neutral-300 font-semibold mb-1">{title}</h2>{" "}
-      <div className="text-sm text-neutral-300 font-normal">{desc}</div>
+      <h2 className='mb-1 text-base font-semibold text-neutral-300'>{title}</h2>{' '}
+      <div className='text-sm font-normal text-neutral-300'>{desc}</div>
     </div>
   );
 };

@@ -1,21 +1,21 @@
 import {
   SemiCircleProgressProps,
   SemiCircleProgress,
-} from "../SemiCircleProgress";
-import { Meta, StoryObj } from "@storybook/react";
+} from '../SemiCircleProgress';
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof SemiCircleProgress> = {
-  title: "Components/SemiCircleProgress",
+  title: 'Components/SemiCircleProgress',
   component: SemiCircleProgress,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     orientation: {
-      options: ["up", "down"],
-      control: { type: "select" },
+      options: ['up', 'down'],
+      control: { type: 'select' },
     },
     direction: {
-      options: ["right", "left"],
-      control: { type: "select" },
+      options: ['right', 'left'],
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -29,10 +29,10 @@ export const Primary: StoryObj<SemiCircleProgressProps> = {
     percentage: 10,
     diameter: 200,
     showPercentValue: true,
-    stroke: "red",
+    stroke: 'red',
     strokeWidth: 20,
-    direction: "right",
-    title: "Tadow",
-    background: "#D0D0CE",
+    direction: 'right',
+    title: 'Tadow',
+    background: '#D0D0CE',
   },
 };

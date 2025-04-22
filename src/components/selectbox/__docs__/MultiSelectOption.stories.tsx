@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { Meta, StoryFn } from "@storybook/react";
+import React, { useState } from 'react';
+import { Meta, StoryFn } from '@storybook/react';
 import MultiSelectOption, {
   MultiSelectOptionProps,
-} from "../MultiSelectionItems";
+} from '../MultiSelectionItems';
 
 const Itemsoptions = [
-  { label: "Grapes 🍇", value: "grapes" },
-  { label: "Mango 🥭", value: "mango" },
-  { label: "Strawberry 🍓", value: "strawberry" },
+  { label: 'Grapes 🍇', value: 'grapes' },
+  { label: 'Mango 🥭', value: 'mango' },
+  { label: 'Strawberry 🍓', value: 'strawberry' },
 ];
 
 const meta: Meta<typeof MultiSelectOption> = {
-  title: "components/MultiSelectOption",
+  title: 'components/MultiSelectOption',
   component: MultiSelectOption,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -37,14 +37,14 @@ export const MultiSelectPrimary: StoryFn<MultiSelectOptionProps> = (args) => (
 );
 
 MultiSelectPrimary.args = {
-  title: "Multi Select Options",
+  title: 'Multi Select Options',
   items: Itemsoptions,
   selected: [],
   hasSelectAll: false,
-  overrideStrings: "Select Me Please",
+  overrideStrings: 'Select Me Please',
   disabled: false,
   disableSearch: false,
   isLoading: false,
-  className: "",
+  className: '',
   closeOnChangedValue: false,
 };

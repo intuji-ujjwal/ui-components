@@ -1,9 +1,9 @@
-import { ChangeEvent } from "react";
-import "./CheckboxDesign.css";
-import React from "react";
+import { ChangeEvent } from 'react';
+import './CheckboxDesign.css';
+import React from 'react';
 export interface CheckboxProps {
   id?: string;
-  type?: "slide" | "default" | "radio";
+  type?: 'slide' | 'default' | 'radio';
   children?: React.ReactNode;
   checked?: boolean;
   label?: string;
@@ -17,13 +17,13 @@ export interface CheckboxProps {
 }
 
 const type_def = {
-  slide: "switch-checkbox switch",
-  default: "default-checkbox default",
-  radio: "radio-checkbox",
+  slide: 'switch-checkbox switch',
+  default: 'default-checkbox default',
+  radio: 'radio-checkbox',
 };
 
 const Checkbox: React.FC<CheckboxProps> = ({
-  type = "slide",
+  type = 'slide',
   checked = false,
   onChange,
   label,
@@ -38,28 +38,28 @@ const Checkbox: React.FC<CheckboxProps> = ({
   return (
     <div>
       <span
-        className={`block text-xs font-semibold mb-2 capitalize label title ${
-          props.checkboxDesigncss ? props.checkboxDesigncss : "mb-2"
-        } ${label ? "" : "hidden"}`}
+        className={`label title mb-2 block text-xs font-semibold capitalize ${
+          props.checkboxDesigncss ? props.checkboxDesigncss : 'mb-2'
+        } ${label ? '' : 'hidden'}`}
       >
         {label}
       </span>
       <label
-        className={`relative label-info flex flex-wrap ${labelStyle} ${class_style} ${
-          isDisabled ? "pointer-events-none" : "cursor-pointer"
+        className={`label-info relative flex flex-wrap ${labelStyle} ${class_style} ${
+          isDisabled ? 'pointer-events-none' : 'cursor-pointer'
         } ${radioBoxStyles && radioBoxStyles}`}
       >
         <input
-          type="checkbox"
+          type='checkbox'
           checked={checked}
           onChange={onChange}
           disabled={isDisabled}
-          className={`${isDisabled && "cursor-not-allowed"}`}
+          className={`${isDisabled && 'cursor-not-allowed'}`}
           //   value={value? value: undefined}
         />
         <span
-          className="slider round"
-          aria-selected={isDisabled ? "true" : "false"}
+          className='slider round'
+          aria-selected={isDisabled ? 'true' : 'false'}
         ></span>
         {props.children && (
           <span className={`label-text ml-2.5`}>{props.children}</span>

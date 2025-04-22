@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import SidebarMenuContentWrap from "../SideBarMenuWrap";
-import jsonFile from "./sidebarMenu.json";
-import React from "react";
+import type { Meta, StoryObj } from '@storybook/react';
+import SidebarMenuContentWrap from '../SideBarMenuWrap';
+import jsonFile from './sidebarMenu.json';
+import React from 'react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
 const meta: Meta = {
-  title: "components/SideBarMenu",
+  title: 'components/SideBarMenu',
   component: SidebarMenuContentWrap,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 } satisfies Meta<typeof SidebarMenuContentWrap>;
 
 export default meta;

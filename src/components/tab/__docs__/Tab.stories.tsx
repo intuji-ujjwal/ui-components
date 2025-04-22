@@ -1,13 +1,13 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { GroupTab, TabProps } from "../Tab";
+import { Meta, StoryObj } from '@storybook/react';
+import { GroupTab, TabProps } from '../Tab';
 const meta: Meta<typeof GroupTab> = {
-  title: "Components/Tab",
+  title: 'Components/Tab',
   component: GroupTab,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     icon: {
-      options: ["reg-user", "reg-check", "fill-warning"],
-      control: { type: "select" },
+      options: ['reg-user', 'reg-check', 'fill-warning'],
+      control: { type: 'select' },
     },
   },
 };
@@ -15,11 +15,11 @@ export default meta;
 
 export const Primary: StoryObj<TabProps> = {
   args: {
-    icon: "reg-user",
-    fill: "red",
+    icon: 'reg-user',
+    fill: 'red',
     items: [
       {
-        title: "TabHead",
+        title: 'TabHead',
         children: (
           <p>
             Content Of
@@ -29,11 +29,11 @@ export const Primary: StoryObj<TabProps> = {
         ),
       },
       {
-        title: "TabTwo",
+        title: 'TabTwo',
         children: <p>Content Of Table Two</p>,
       },
       {
-        title: "TabTwo",
+        title: 'TabTwo',
         children: <p>Content Of Table Two</p>,
       },
       // {

@@ -1,10 +1,10 @@
-import { ProgressBar, ProgressBarProps } from "../ProgressBar";
-import { Meta, StoryObj } from "@storybook/react";
+import { ProgressBar, ProgressBarProps } from '../ProgressBar';
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof ProgressBar> = {
-  title: "Components/ProgressBar",
+  title: 'Components/ProgressBar',
   component: ProgressBar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {},
   parameters: {
     controls: { expanded: true },
@@ -17,6 +17,6 @@ export const Primary: StoryObj<ProgressBarProps> = {
     min: 0,
     max: 100,
     percentage: 40,
-    color: "red",
+    color: 'red',
   },
 };

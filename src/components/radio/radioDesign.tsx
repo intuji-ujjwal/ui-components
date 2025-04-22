@@ -1,5 +1,5 @@
-import React from "react";
-import "./radioDesign.css";
+import React from 'react';
+import './radioDesign.css';
 
 type RadioButtonProps = {
   checked?: boolean;
@@ -33,33 +33,31 @@ const RadioButton = ({
   return (
     <label
       className={`radio-input-field ${
-        additionInfo ? "with-additional-info flex-wrap" : ""
-      }
-      ${containerStyles ? containerStyles : ""}
-      ${disabled ? "pointer-events-none" : "cursor-pointer"}`}
+        additionInfo ? 'with-additional-info flex-wrap' : ''
+      } ${containerStyles ? containerStyles : ''} ${disabled ? 'pointer-events-none' : 'cursor-pointer'}`}
     >
       <input
-        type="radio"
+        type='radio'
         readOnly
         checked={checked}
         disabled={disabled}
         onFocus={handleFocus}
         onChange={onChange}
-        name={name ? name : ""}
+        name={name ? name : ''}
       />
-      <div className="checkmark" />
+      <div className='checkmark' />
       {label ? (
         <div
-          className={`${labelStyles ? labelStyles : ""} radio-label ${
-            additionInfo ? "w-full" : ""
+          className={`${labelStyles ? labelStyles : ''} radio-label ${
+            additionInfo ? 'w-full' : ''
           }`}
         >
           {label}
         </div>
       ) : null}
       {additionInfo && (
-        <span className="block text-neutral-200 text-base font-normal w-full">
-          {" "}
+        <span className='block w-full text-base font-normal text-neutral-200'>
+          {' '}
           {additionInfo}
         </span>
       )}

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import Pagination, { PaginationProps } from "../Pagination";
+import React, { useState } from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import Pagination, { PaginationProps } from '../Pagination';
 
 const meta: Meta<typeof Pagination> = {
-  title: "components/Pagination",
+  title: 'components/Pagination',
   component: Pagination,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;

@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utils";
+import { cn } from '../../lib/utils';
 
 // TypeScript type for the props
 type ImageComponentProps = {
@@ -16,12 +16,12 @@ const ImageComponent = ({
   height,
 }: ImageComponentProps) => {
   const defaultClass = `max-w-full transition duration-150 ease-out`;
-  const widthOfImg = width ? width : "";
-  const heightOfImg = height ? height : "";
+  const widthOfImg = width ? width : '';
+  const heightOfImg = height ? height : '';
   return (
     <img
-      src={src ? src : "../src/assets/images/placeholder-image.png"}
-      alt={alt ? alt : "image"}
+      src={src ? src : '../src/assets/images/placeholder-image.png'}
+      alt={alt ? alt : 'image'}
       className={cn(defaultClass, classes)}
       style={{
         width: widthOfImg,

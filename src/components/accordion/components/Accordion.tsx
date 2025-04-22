@@ -1,8 +1,8 @@
-import React, { useId } from "react";
-import { AccordionItem } from "./AccordionItem";
-import { AccordionProps } from "../types";
-import useAccordionState from "../hook/useAccordionState";
-import { ChevronUpIcon, ChevronDownIcon } from "../assets/icons";
+import React, { useId } from 'react';
+import { AccordionItem } from './AccordionItem';
+import { AccordionProps } from '../types';
+import useAccordionState from '../hook/useAccordionState';
+import { ChevronUpIcon, ChevronDownIcon } from '../assets/icons';
 
 const Accordion: React.FC<AccordionProps> = ({
   items,
@@ -14,7 +14,10 @@ const Accordion: React.FC<AccordionProps> = ({
   const { openItems, handleToggle } = useAccordionState(allowMultiple);
 
   return (
-    <div className="border border-gray-200 rounded-md" role="tablist">
+    <div
+      className='rounded-md border border-gray-200'
+      role='tablist'
+    >
       {items.map((item, index) => (
         <AccordionItem
           key={index + id}
