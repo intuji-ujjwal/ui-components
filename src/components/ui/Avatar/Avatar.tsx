@@ -58,7 +58,7 @@ const Avatar: React.FC<AvatarProps> = ({
               <img
                 src={item?.imageSrc}
                 alt={item?.name}
-                className='absolute left-0 top-0 h-full w-full object-cover'
+                className='absolute top-0 left-0 h-full w-full object-cover'
               />
             </figure>
           ))}

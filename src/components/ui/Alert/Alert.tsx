@@ -42,7 +42,7 @@ const Alert: React.FC<AlertProps> = ({
       {openState === true ? (
         <div className={cn(defaultBttnClass, AlertTypeClasses[type], classes)}>
           <div className='relative pl-14'>
-            <span className='icon absolute left-0 top-0 block'>
+            <span className='icon absolute top-0 left-0 block'>
               {alertIcon ? alertIcon : AlertIcon(type)}
             </span>
             <div className='flex items-start justify-between gap-2'>

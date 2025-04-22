@@ -114,7 +114,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 <span>Page</span>
                 <input
                   type='number'
-                  className='pagination__input--number focus:outline-primary-700 h-6 w-8 rounded border border-neutral-100 p-0 text-center text-base font-medium leading-none'
+                  className='pagination__input--number focus:outline-primary-700 h-6 w-8 rounded border border-neutral-100 p-0 text-center text-base leading-none font-medium'
                   min={1}
                   max={totalPages}
                   value={currentPage}
@@ -147,7 +147,7 @@ const Pagination: React.FC<PaginationProps> = ({
             <span className='text-sm text-black'>Show</span>
             <select
               name='show-items'
-              className='focus:outline-primary-700 w-[64px] rounded border border-neutral-100 text-center text-base font-medium leading-none'
+              className='focus:outline-primary-700 w-[64px] rounded border border-neutral-100 text-center text-base leading-none font-medium'
               value={showCount}
               onChange={handleShowCountChange}
             >

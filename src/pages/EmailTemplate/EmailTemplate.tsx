@@ -5,8 +5,8 @@ export interface EmailTemplateProps {
 }
 const EmailTemplate = () => {
   return (
-    <div className='flex h-screen items-center justify-center bg-cds_accent-100'>
-      <table className='mb-8 gap-6 rounded-lg bg-cds_primary-50 py-12 shadow-md md:mb-40 md:h-2/5 md:w-2/5'>
+    <div className='bg-cds_accent-100 flex h-screen items-center justify-center'>
+      <table className='bg-cds_primary-50 mb-8 gap-6 rounded-lg py-12 shadow-md md:mb-40 md:h-2/5 md:w-2/5'>
         <tbody className=''>
           <tr className='flex flex-col gap-4 p-12'>
             <td className='pb-8'>
@@ -29,7 +29,7 @@ const EmailTemplate = () => {
               new password, feel free to ignore or delete this email.
             </td>
             <td className='pb-6'>
-              <button className='rounded-md border bg-cds_accent-900 p-2 text-cds_primary-100'>
+              <button className='bg-cds_accent-900 text-cds_primary-100 rounded-md border p-2'>
                 Change my password
               </button>
             </td>

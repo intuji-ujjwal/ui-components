@@ -37,10 +37,10 @@ export const CartHeader: React.FC<cartHeaderProps> = ({
         </div>
       </div>
       <div className='flex flex-col justify-end p-4'>
-        <div className='text-right text-base uppercase tracking-wider'>
+        <div className='text-right text-base tracking-wider uppercase'>
           {!returnOrder && (
             <>
-              <span className='border-r-2 p-4 font-black text-primary-500'>
+              <span className='text-primary-500 border-r-2 p-4 font-black'>
                 Remove
               </span>
               <span className='p-4'>34353</span>
