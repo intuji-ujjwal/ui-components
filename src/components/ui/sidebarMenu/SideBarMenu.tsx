@@ -31,7 +31,7 @@ const SideBarMenu: React.FC<SideBarMenuProps> = ({
     <div
       className={`sidebar-menu min-h-screen transition duration-150 ease-in-out ${
         classes || ''
-      } ${expandSideBar ? 'expanded w-[288px]' : 'w-[96px]'} fixed top-0 bottom-0 left-0 overflow-y-auto bg-gray-950 py-6 text-white`}
+      } ${expandSideBar ? 'expanded w-[288px]' : 'w-[96px]'} fixed bottom-0 left-0 top-0 overflow-y-auto bg-gray-950 py-6 text-white`}
     >
       <div className='grid h-full grid-cols-1 place-content-between'>
         <div>
@@ -131,7 +131,7 @@ const SideBarItem: React.FC<SideBarItemProps> = ({ item, expandSideBar }) => {
     <>
       <li
         className={`menu-item relative ${
-          item?.children && expandSideBar ? 'pr-12 pl-6' : 'px-6'
+          item?.children && expandSideBar ? 'pl-6 pr-12' : 'px-6'
         }`}
       >
         <a
@@ -154,7 +154,7 @@ const SideBarItem: React.FC<SideBarItemProps> = ({ item, expandSideBar }) => {
             <span
               className={`toggle flex h-4 w-4 items-center justify-center ${
                 toggleData ? 'rotate-0' : 'rotate-180'
-              } absolute top-4 right-5`}
+              } absolute right-5 top-4`}
               onClick={() => setToggleData(!toggleData)}
             >
               <IconsComponent

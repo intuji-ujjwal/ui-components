@@ -42,7 +42,7 @@ const PopupModal: React.FC<PopupProps> = ({ title, children }) => {
       </Button>
       {showModal && (
         <>
-          <div className='fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto'>
+          <div className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden'>
             <div
               ref={modalRef}
               className='relative mx-auto my-6 w-auto max-w-3xl'

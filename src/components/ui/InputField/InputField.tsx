@@ -114,7 +114,7 @@ const InputField: React.FC<PrimaryInputProps> = ({
                   }}
                   onBlur={onBlur}
                   ref={ref}
-                  className={`input-${class_style} h-[40px] w-full rounded border-2 py-2.5 text-base leading-none font-normal ${type === 'search' ? 'pr-4 pl-[46px]' : 'px-4'} ${error ? 'error border-danger-500 focus:outline-none' : 'focus:outline-primary-700 border-neutral-100'} min-h-[${minHeight ? minHeight + 'px' : ''}]`}
+                  className={`input-${class_style} h-[40px] w-full rounded border-2 py-2.5 text-base font-normal leading-none ${type === 'search' ? 'pl-[46px] pr-4' : 'px-4'} ${error ? 'error border-danger-500 focus:outline-none' : 'focus:outline-primary-700 border-neutral-100'} min-h-[${minHeight ? minHeight + 'px' : ''}]`}
                   style={
                     type === 'search'
                       ? {
@@ -127,7 +127,7 @@ const InputField: React.FC<PrimaryInputProps> = ({
                 />
                 {type == 'password' && (
                   <span
-                    className='absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer'
+                    className='absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer'
                     onClick={handleTogglePassword}
                   >
                     Show

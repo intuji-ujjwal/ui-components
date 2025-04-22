@@ -52,7 +52,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             setMinVal(value);
             minValRef.current = value;
           }}
-          className={`thumb thumb--left absolute top-1/2 left-0 h-0 w-full -translate-y-1/2 ${
+          className={`thumb thumb--left absolute left-0 top-1/2 h-0 w-full -translate-y-1/2 ${
             minVal <= max / 2 ? 'z-50' : 'z-10'
           }`}
           style={{
@@ -81,7 +81,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({ min, max, fill }) => {
             setMaxVal(value);
             maxValRef.current = value;
           }}
-          className={`thumb thumb--right absolute top-1/2 left-0 h-0 w-full -translate-y-1/2 ${
+          className={`thumb thumb--right absolute left-0 top-1/2 h-0 w-full -translate-y-1/2 ${
             maxVal > max / 2 ? 'z-50' : 'z-10'
           }`}
           style={{

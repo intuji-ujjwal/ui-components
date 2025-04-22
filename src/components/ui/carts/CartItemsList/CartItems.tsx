@@ -78,7 +78,7 @@ export const CartItems: React.FC<cartTableProps> = ({
               returnOrder={returnOrder}
             />
             {showVariants[index] && (
-              <div className='responsive-table w-full overflow-x-auto rounded-lg border-t-2 border-b-2 border-dashed bg-white p-4 pb-2 transition-all delay-150 ease-in-out'>
+              <div className='responsive-table w-full overflow-x-auto rounded-lg border-b-2 border-t-2 border-dashed bg-white p-4 pb-2 transition-all delay-150 ease-in-out'>
                 {loading ? (
                   <TableLoader returnOrder={returnOrder} />
                 ) : (
