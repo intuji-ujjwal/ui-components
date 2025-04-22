@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '../../../lib/utils';
+import { cn } from '../../../utils/cn';
 
 type ButtonSize = 'small' | 'medium' | 'large';
 type ButtonDesignType = 'solid' | 'outline' | 'tertiary';

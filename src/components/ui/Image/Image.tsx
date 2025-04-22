@@ -1,4 +1,4 @@
-import { cn } from '../../../lib/utils';
+import { cn } from '../../../utils/cn';
 
 // TypeScript type for the props
 type ImageComponentProps = {

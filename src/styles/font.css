@@ -2,49 +2,52 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA45LIGHT.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA45LIGHT.TTF') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA46LIGHTITALIC.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA46LIGHTITALIC.TTF')
+    format('truetype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA55REGULAR.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA55REGULAR.TTF')
+    format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA56ITALIC.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA56ITALIC.TTF') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA65MEDIUM.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA65MEDIUM.TTF') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA66MEDIUMITALIC.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA66MEDIUMITALIC.TTF')
+    format('truetype');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./customFonts/futura/FUTURA75BOLD.TTF') format('truetype');
+  src: url('../assets/customFonts/futura/FUTURA75BOLD.TTF') format('truetype');
   font-weight: 700;
   font-style: normal;
 }

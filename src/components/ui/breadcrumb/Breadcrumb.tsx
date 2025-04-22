@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { slugify } from '../../../utils/slugify';
+import { slugify } from '../../../utils/helper/slugify.helper';
 
 interface BreadcrumbsProps {
   title: string | ReactNode;
@@ -18,7 +18,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   return (
     <div
       className={`breadcrumb bg-danger-0 flex items-center gap-5 px-6 py-4 breadcrumb-${
-        title ? slugify(title) : 'default'
+        title ? slugify(title as string) : 'default'
       }`}
     >
       {previcon && (

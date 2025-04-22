@@ -1,7 +1,7 @@
 import React from 'react';
 import { cva, VariantProps } from 'cva';
 
-import { cn } from '../../../lib/utils';
+import { cn } from '../../../utils/cn';
 
 export const badgeVariants = cva(
   'rounded leading-none inline-flex items-center justify-center capitalize py-1 px-2 text-xs gap-1.5',
