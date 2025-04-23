@@ -7,7 +7,7 @@ export interface AccordionItemProps {
   children: ReactNode;
 }
 
-export interface AccordionProps {
+export interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   items: AccordionItemProps[];
   allowMultiple?: boolean;
   UpIcon?: React.ComponentType<IconProps>;
