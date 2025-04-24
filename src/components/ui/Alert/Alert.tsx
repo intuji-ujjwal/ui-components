@@ -3,7 +3,7 @@ import React from 'react';
 import { AlertIcon } from './alertIcon';
 import { cn } from '../../../utils/cn';
 
-type AlertType = 'success' | 'error' | 'info' | 'warning' | 'default';
+export type AlertType = 'success' | 'error' | 'info' | 'warning' | 'default';
 
 const defaultBttnClass = 'py-4 px-6 border-l-4 w-full rounded';
 
@@ -22,7 +22,7 @@ export interface AlertProps {
   children?: React.ReactNode;
   link?: string;
   openState: boolean;
-  classes?: string;
+  className?: string;
   alertIcon?: React.ReactNode;
   setOpenState: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -32,7 +32,7 @@ const Alert: React.FC<AlertProps> = ({
   title,
   description,
   link,
-  classes,
+  className,
   children,
   alertIcon,
   setOpenState,
@@ -40,7 +40,10 @@ const Alert: React.FC<AlertProps> = ({
   return (
     <>
       {openState === true ? (
-        <div className={cn(defaultBttnClass, AlertTypeClasses[type], classes)}>
+        <div
+          role='alert'
+          className={cn(defaultBttnClass, AlertTypeClasses[type], className)}
+        >
           <div className='relative pl-14'>
             <span className='icon absolute left-0 top-0 block'>
               {alertIcon ? alertIcon : AlertIcon(type)}
