@@ -1,4 +1,4 @@
-import { cva } from 'cva';
+import { cva } from 'class-variance-authority';
 
 export const accordionStyles = cva(
   'w-full p-4 text-left focus:outline-none transition-height duration-300 ease-in-out flex items-center justify-between px-4 py-3',
