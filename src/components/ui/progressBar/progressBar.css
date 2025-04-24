@@ -1,0 +1,17 @@
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--percentage);
+  }
+}
+.animate-progress {
+  animation: progress 0.5s ease-out;
+  --percentage: 0%;
+}
+
+.animate-progress {
+  transition: width 0.5s ease-out;
+  width: 0%;
+}

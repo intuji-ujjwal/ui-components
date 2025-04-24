@@ -1,14 +1,14 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Example from "./Example";
+import { Meta, StoryObj } from '@storybook/react';
+import Example from './Example';
 const meta = {
-  title: "Pages/Login",
+  title: 'Pages/Login',
   component: Example,
   argTypes: {
     email: {
-      control: { type: "text" },
+      control: { type: 'text' },
     },
     password: {
-      control: { type: "text" },
+      control: { type: 'text' },
     },
   },
   parameters: {
@@ -21,5 +21,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ScrapAssist: Story = {
-  play: () => console.log("Button clicked"),
+  play: () => console.log('Button clicked'),
 };
