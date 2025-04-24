@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import IconsComponent, { icons } from '../icons/IconsComponent';
+import { cn } from '../../../utils/cn';
 import ImageComponent from '../Image/Image';
+import IconsComponent, { icons } from '../icons/IconsComponent';
 
 type MenuItem = {
   name: string;
@@ -38,7 +39,7 @@ const SideBarMenu: React.FC<SideBarMenuProps> = ({
           <div className='logo mb-5 px-6'>
             <ImageComponent
               src={`${imageSrc ? imageSrc : '../src/assets/images/placeholder-image.png'}`}
-              width={expandSideBar ? 84 : 48}
+              className={cn(expandSideBar ? 'size-[84px]' : 'size-[48px]')}
             />
           </div>
           {sidebarMenus.map((section, index) => (

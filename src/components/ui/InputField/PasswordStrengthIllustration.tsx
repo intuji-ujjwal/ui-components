@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { JSX } from 'react';
+
 import './inputField.css';
+
 interface PasswordStrengthIllustrationProps {
   strength: number;
 }

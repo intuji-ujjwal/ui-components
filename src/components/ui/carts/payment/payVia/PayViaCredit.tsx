@@ -26,13 +26,11 @@ export const PayViaTable: React.FC<paymentProp> = ({
       {amount > 1500 ? (
         <Alert
           type='warning'
-          title='Default Alert'
-          description='This is a default alert.'
-          link=''
-          classes=''
-          openState={stateOpen}
           alertIcon={null}
+          title='Default Alert'
+          openState={stateOpen}
           setOpenState={setStateOpen}
+          description='This is a default alert.'
         />
       ) : (
         <div className='border-t-2 py-2 text-center text-xs text-gray-500'>

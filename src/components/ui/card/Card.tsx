@@ -54,7 +54,7 @@ const Card: React.FC<CardProps> = () => {
           {/* SVG Here */}
           <Flame
             cursor={cursor}
-            cardRef={cardsRef}
+            cardRef={cardsRef as React.RefObject<HTMLElement>}
             mouseOnCard={mouseOnCard}
           />
         </div>

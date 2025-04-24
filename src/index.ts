@@ -1,2 +1,2 @@
-// src/index.ts
-export * from './components'; // This will export all components from the 'components' folder
+export * from './components/ui/Alert/Alert';
+export * from './components/ui/Avatar/Avatar';
