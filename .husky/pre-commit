@@ -1,3 +1,2 @@
 npm run format
-
-# npm test TODO - Fix Later
+npm run test
