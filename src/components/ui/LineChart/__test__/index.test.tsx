@@ -51,10 +51,10 @@ describe('LineChart Component', () => {
       />,
     );
 
-    // First test with scales visible
+    // test with scales visible
     expect(screen.getByTestId('mock-line-chart')).toBeInTheDocument();
 
-    // Then rerender with scales hidden
+    // rerender with scales hidden
     rerender(
       <LineChart
         items={mockItems}
@@ -79,10 +79,10 @@ describe('LineChart Component', () => {
       />,
     );
 
-    // First test with shadow visible
+    // test with shadow visible
     expect(screen.getByTestId('mock-line-chart')).toBeInTheDocument();
 
-    // Then rerender with shadow hidden
+    // rerender with shadow hidden
     rerender(
       <LineChart
         items={mockItems}
