@@ -53,5 +53,6 @@ export const Primary: Story = {
     children: <div>add anything here</div>,
     previcon: <PrevPageSvg />,
     onClick: fn(),
+    className: '',
   },
 };

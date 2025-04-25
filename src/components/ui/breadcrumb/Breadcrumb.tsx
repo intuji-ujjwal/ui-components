@@ -1,25 +1,24 @@
-import React, { ReactNode } from 'react';
+import { cn } from '../../../utils/cn';
+import { BreadcrumbsProp } from './types';
 import { slugify } from '../../../utils/helper/slugify.helper';
 
-interface BreadcrumbsProps {
-  title: string | ReactNode;
-  path?: { id: number; link: string; label: string }[];
-  children?: ReactNode;
-  previcon?: React.JSX.Element;
-  onClick?: () => void;
-}
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
+const Breadcrumbs = ({
   title,
   path,
   children,
   previcon,
   onClick,
-}) => {
+  className,
+  ...props
+}: BreadcrumbsProp) => {
   return (
     <div
-      className={`breadcrumb bg-danger-0 flex items-center gap-5 px-6 py-4 breadcrumb-${
-        title ? slugify(title as string) : 'default'
-      }`}
+      className={cn(
+        'breadcrumb bg-danger-0 flex items-center gap-5 px-6 py-4',
+        `breadcrumb-${title ? slugify(title as string) : 'default'}`,
+        className,
+      )}
+      {...props}
     >
       {previcon && (
         <div
