@@ -1,5 +1,5 @@
 import { VariantProps } from 'class-variance-authority';
-import { badgeVariants } from '../constant/Badge';
+import { badgeVariants } from '../helper/Badge';
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,

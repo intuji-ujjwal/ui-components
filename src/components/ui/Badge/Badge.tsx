@@ -1,6 +1,6 @@
 import { BadgeProps } from './types';
 import { cn } from '../../../utils/cn';
-import { badgeVariants } from './constant/Badge';
+import { badgeVariants } from './helper/Badge';
 
 export const Badge = ({
   className,
