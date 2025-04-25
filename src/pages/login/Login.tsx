@@ -1,5 +1,5 @@
 import { ScrapAssistLogo } from './assets/logo';
-import Button from '../../components/ui/button/Button';
+import { Button } from '../../components/ui/button/Button';
 
 const Login = () => {
   return (
@@ -24,14 +24,7 @@ const Login = () => {
           Please log in with your account to access Scrap Assist.
         </p>
         <form>
-          <Button
-            size='large'
-            type='button'
-            designType={'solid'}
-            varient={'primary'}
-          >
-            button
-          </Button>
+          <Button>button</Button>
         </form>
       </main>
       <footer className='mb-5 text-center text-cds_accent-50 antialiased'>

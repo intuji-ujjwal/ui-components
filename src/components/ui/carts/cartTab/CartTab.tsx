@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../../button/Button';
+import { Button } from '../../button/Button';
 import { PayViaTable } from '../payment/payVia/PayViaCredit';
 import { PayViaCard } from '../payment/payVia/PayViaCard';
 
@@ -48,16 +48,12 @@ export const CartTab: React.FC<CartTabProps> = ({
             key={idx}
           >
             <Button
-              size='small'
-              type='button'
-              designType='tertiary'
-              varient='primary'
-              classes={`transition-colors duration-300 flex gap-2 text-[#000000] w-full rounded-lg ${
+              className={`flex w-full gap-2 rounded-lg text-[#000000] transition-colors duration-300 ${
                 idx === activeTabIndex
-                  ? 'border-black bg-white shadow text-black'
+                  ? 'border-black bg-white text-black shadow'
                   : 'border-transparent hover:border-gray-200'
               }`}
-              handleClick={() => handleTabClick(idx)}
+              onClick={() => handleTabClick(idx)}
             >
               {tab.title}
             </Button>

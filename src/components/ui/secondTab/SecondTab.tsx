@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 interface tabProps {
   title: string;
   children: ReactNode;
@@ -57,16 +57,12 @@ const SecondTab: React.FC<SecondTabProps> = ({
             key={index}
           >
             <Button
-              size='small'
-              type='button'
-              designType='tertiary'
-              varient='primary'
-              classes={`transition-colors duration-300  flex gap-2 text-[#000000] w-full rounded-lg ${
+              className={`flex w-full gap-2 rounded-lg text-[#000000] transition-colors duration-300 ${
                 index === activeTabIndex
-                  ? 'border-black bg-white shadow font-black'
-                  : 'border-transparent hover:border-gray-200 text-grayColor'
+                  ? 'border-black bg-white font-black shadow'
+                  : 'text-grayColor border-transparent hover:border-gray-200'
               }`}
-              handleClick={() => handleTabClick(index)}
+              onClick={() => handleTabClick(index)}
             >
               {items[index]?.title}
             </Button>

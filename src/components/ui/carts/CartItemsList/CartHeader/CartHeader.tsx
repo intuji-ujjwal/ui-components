@@ -1,8 +1,5 @@
-import Button from '../../../button/Button';
+import { Button } from '../../../button/Button';
 import { icons } from '../../../icons/IconsComponent';
-import { IconHide } from '../../../icons/regular/Hide';
-import { IconAdd } from '../../../icons/regular/add';
-import { IconShow } from '../../../icons/regular/show';
 
 import { Shoe } from '../assets/Shoe';
 interface cartHeaderProps {
@@ -14,7 +11,6 @@ interface cartHeaderProps {
 }
 export const CartHeader: React.FC<cartHeaderProps> = ({
   showVariant,
-  setShowVariant,
   returnOrder,
 }) => {
   return (
@@ -69,18 +65,8 @@ export const CartHeader: React.FC<cartHeaderProps> = ({
           ) : (
             <>
               <Button
-                size='medium'
                 type='button'
-                designType={'tertiary'}
-                varient={'primary'}
-                leftIcon={
-                  <IconAdd
-                    fill='blue'
-                    size={18}
-                  />
-                }
-                classes='text-blue-500 text-base font-semibold'
-                // handleClick={}
+                className='text-base font-semibold text-blue-500'
               >
                 Add more Variant{' '}
               </Button>
@@ -90,25 +76,8 @@ export const CartHeader: React.FC<cartHeaderProps> = ({
             </>
           )}
           <Button
-            size='small'
             type='button'
-            designType='tertiary'
-            varient='primary'
-            handleClick={() => setShowVariant((prev) => !prev)}
-            classes='flex items-center  font-semibold text-sm font-semibold text-black '
-            leftIcon={
-              showVariant ? (
-                <IconHide
-                  fill='black'
-                  size={18}
-                />
-              ) : (
-                <IconShow
-                  fill='black'
-                  size={18}
-                />
-              )
-            }
+            className='flex items-center text-sm font-semibold text-black'
           >
             {showVariant ? 'Hide Variant' : 'Show variant'}
           </Button>

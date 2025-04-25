@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import { IconClose } from '../icons/regular/close';
 export interface PopupProps {
   title: string;
@@ -31,12 +31,8 @@ const PopupModal: React.FC<PopupProps> = ({ title, children }) => {
   return (
     <>
       <Button
-        size='medium'
-        type='button'
-        designType={'solid'}
-        varient={'primary'}
-        handleClick={() => setShowModal(true)}
-        classes='text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg mr-1 mb-1 ease-linear transition-all duration-150'
+        onClick={() => setShowModal(true)}
+        className='mb-1 mr-1 rounded px-6 py-3 text-sm font-bold uppercase text-white shadow transition-all duration-150 ease-linear hover:shadow-lg active:bg-pink-600'
       >
         {title}
       </Button>

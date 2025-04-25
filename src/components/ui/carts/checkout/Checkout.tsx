@@ -1,7 +1,7 @@
 import { IconInfo } from '../../icons/fill/Info';
 import { ProgressBar } from '../../progressBar/ProgressBar';
 import { SummaryTable } from '../payment/paymentTable/SummaryTable';
-import Button from '../../button/Button';
+import { Button } from '../../button/Button';
 export interface PaymentChildrenProps {
   subtotal: number;
   carriageCost: number;
@@ -54,14 +54,7 @@ const Checkout: React.FC<PaymentProps> = ({
       <div className='border-b-2 p-2'>
         <SummaryTable items={items} />
       </div>
-      <Button
-        size='medium'
-        type='button'
-        designType={'solid'}
-        varient={'primary'}
-      >
-        Proceed to Checkout
-      </Button>
+      <Button type='button'>Proceed to Checkout</Button>
     </div>
   );
 };

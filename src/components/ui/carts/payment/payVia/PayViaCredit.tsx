@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Alert from '../../../Alert/Alert';
-import Button from '../../../button/Button';
+import { Button } from '../../../button/Button';
 import { CreditTable } from '../paymentTable/CreditTable';
 
 export interface paymentProp {
@@ -39,11 +39,8 @@ export const PayViaTable: React.FC<paymentProp> = ({
         </div>
       )}
       <Button
-        size='medium'
         type='button'
-        designType={'solid'}
-        varient={'primary'}
-        classes='shadow w-full'
+        className='w-full shadow'
       >
         {buttonString}
       </Button>

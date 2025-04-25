@@ -1,4 +1,4 @@
-import Button from '../../../button/Button';
+import { Button } from '../../../button/Button';
 import { CardTable } from '../paymentTable/CardTable';
 
 export interface paymentProp {
@@ -15,11 +15,8 @@ export const PayViaCard: React.FC<paymentProp> = ({ buttonString }) => {
         Conditions and Privacy Policy.
       </div>
       <Button
-        size='medium'
         type='button'
-        designType={'solid'}
-        varient={'primary'}
-        classes='shadow w-full'
+        className='w-full shadow'
       >
         {buttonString}
       </Button>
