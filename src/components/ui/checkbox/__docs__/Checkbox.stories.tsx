@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Checkbox from '../Checkbox';
+import { Checkbox } from '../Checkbox';
 
 const meta = {
-  title: 'components/Toggle Switch',
+  title: 'components/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
 } satisfies Meta<typeof Checkbox>;
@@ -12,16 +12,9 @@ type Story = StoryObj<typeof meta>;
 
 export const PrimaryToggle: Story = {
   args: {
-    type: 'slide',
-    children: 'Checkbox',
     checked: false,
-  },
-  argTypes: {
-    type: {
-      control: {
-        type: 'select',
-        options: ['default', 'slide'],
-      },
-    },
+    disabled: false,
+    indeterminate: false,
+    className: '',
   },
 };
