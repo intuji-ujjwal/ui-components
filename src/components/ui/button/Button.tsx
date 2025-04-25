@@ -13,8 +13,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ intent, variant, size }), className)}
         data-cy={`${variant}-button, type ${intent}`}
+        className={cn(buttonVariants({ intent, variant, size }), className)}
         {...props}
       />
     );
