@@ -7,7 +7,7 @@ const meta: Meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      options: ['default', 'yellow', 'red', 'green', 'blue', 'primary'],
+      options: ['yellow', 'red', 'green', 'blue', 'gray'],
       control: { type: 'select' },
     },
   },
